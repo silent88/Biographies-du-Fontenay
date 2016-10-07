@@ -82,3 +82,13 @@ sl:warn] [pid 6792:tid 396] AH01909: www.example.com:443:0 server certificate do
 [Thu Sep 29 15:08:54.311363 2016] [ssl:warn] [pid 4276:tid 460] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Thu Sep 29 15:08:54.814958 2016] [ssl:warn] [pid 4276:tid 460] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Thu Sep 29 15:08:54.989154 2016] [mpm_winnt:notice] [pid 4276:tid 460] AH00354: Child: Starting 150 worker threads.
+[Fri Oct 07 18:25:16.009551 2016] [ssl:warn] [pid 2484:tid 392] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Oct 07 18:25:16.169726 2016] [core:warn] [pid 2484:tid 392] AH00098: pid file C:/home/FontenayPayload/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Oct 07 18:25:16.482077 2016] [ssl:warn] [pid 2484:tid 392] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Oct 07 18:25:16.823460 2016] [mpm_winnt:notice] [pid 2484:tid 392] AH00455: Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 configured -- resuming normal operations
+[Fri Oct 07 18:25:16.823460 2016] [mpm_winnt:notice] [pid 2484:tid 392] AH00456: Apache Lounge VC11 Server built: Oct 13 2015 10:54:13
+[Fri Oct 07 18:25:16.823460 2016] [core:notice] [pid 2484:tid 392] AH00094: Command line: 'c:\\home\\fontenaypayload\\xampp\\apache\\bin\\httpd.exe -d C:/home/FontenayPayload/xampp/apache'
+[Fri Oct 07 18:25:16.839507 2016] [mpm_winnt:notice] [pid 2484:tid 392] AH00418: Parent: Created child process 5088
+[Fri Oct 07 18:25:18.192998 2016] [ssl:warn] [pid 5088:tid 384] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Oct 07 18:25:18.650540 2016] [ssl:warn] [pid 5088:tid 384] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Oct 07 18:25:18.833717 2016] [mpm_winnt:notice] [pid 5088:tid 384] AH00354: Child: Starting 150 worker threads.
