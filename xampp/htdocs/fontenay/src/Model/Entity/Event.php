@@ -33,4 +33,15 @@ class Event extends Entity
         '*' => true,
         'idEvent' => false
     ];
+	
+	/**
+	 * Virtual Field: Age
+	 * @todo
+	 * 
+	 * @var string
+	 */
+	 protected function _getAge()
+	 {
+	 	return '12..14';
+	 }
 }
