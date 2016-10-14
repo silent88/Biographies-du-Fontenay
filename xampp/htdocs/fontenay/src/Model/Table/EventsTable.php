@@ -47,6 +47,13 @@ class EventsTable extends Table
             ->integer('idEvent')
             ->allowEmpty('idEvent', 'create');
 
+		$validator
+            ->requirePresence('Title', 'create')
+            ->notEmpty('Title');
+
+        $validator
+            ->allowEmpty('Description');
+
         $validator
             ->allowEmpty('FuzzyDateBeginDay');
 
@@ -64,12 +71,6 @@ class EventsTable extends Table
 
         $validator
             ->allowEmpty('FuzzyDateEndYear');
-
-        $validator
-            ->allowEmpty('Title');
-
-        $validator
-            ->allowEmpty('Description');
 
         $validator
             ->allowEmpty('ResonanceLevel');

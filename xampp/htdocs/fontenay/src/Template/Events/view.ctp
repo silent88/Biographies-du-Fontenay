@@ -10,6 +10,18 @@
 <div class="events view large-9 medium-8 columns content">
     <h3><?= h($event->idEvent) ?></h3>
     <table class="vertical-table">
+    	<tr>
+            <th scope="row"><?= __('IdEvent') ?></th>
+            <td><?= $this->Number->format($event->idEvent) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Title') ?></th>
+            <td><?= h($event->Title) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Description') ?></th>
+            <td><?= h($event->Description) ?></td>
+        </tr>
         <tr>
             <th scope="row"><?= __('FuzzyDateBeginDay') ?></th>
             <td><?= h($event->FuzzyDateBeginDay) ?></td>
@@ -35,16 +47,8 @@
             <td><?= h($event->FuzzyDateEndYear) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($event->Title) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('ResonanceLevel') ?></th>
             <td><?= h($event->ResonanceLevel) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('IdEvent') ?></th>
-            <td><?= $this->Number->format($event->idEvent) ?></td>
         </tr>
     </table>
 </div>
