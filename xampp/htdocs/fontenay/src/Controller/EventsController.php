@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Model\Entity\FuzzyDateRange;
 
 /**
  * Events Controller
@@ -37,6 +38,20 @@ class EventsController extends AppController
             'contain' => []
         ]);
 
+		$fdr = new FuzzyDateRange([
+			'FuzzyDateBeginDay' => $event->FuzzyDateBeginDay,
+			'FuzzyDateBeginMonth' => $event->FuzzyDateBeginMonth,
+			'FuzzyDateBeginYear' => $event->FuzzyDateBeginYear,
+			'FuzzyDateEndDay' => $event->FuzzyDateEndDay,
+			'FuzzyDateEndMonth' => $event->FuzzyDateEndMonth,
+			'FuzzyDateEndYear' => $event->FuzzyDateEndYear
+		]);
+		
+		$event->DateBegin = $fdr->_getDateBegin()->format('Y-m-d');
+		$event->DateEnd = $fdr->_getDateEnd()->format('Y-m-d');
+		$event->Years = $fdr->_getYears();
+
+		
         $this->set('event', $event);
         $this->set('_serialize', ['event']);
     }

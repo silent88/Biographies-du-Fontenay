@@ -12,12 +12,8 @@
                 <th scope="col"><?= $this->Paginator->sort('idEvent') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Description') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('FuzzyDateBeginDay') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('FuzzyDateBeginMonth') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('FuzzyDateBeginYear') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('FuzzyDateEndDay') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('FuzzyDateEndMonth') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('FuzzyDateEndYear') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('FuzzyDateBegin') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('FuzzyDateEnd') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('ResonanceLevel') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Age') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -29,12 +25,8 @@
                 <td><?= $this->Number->format($event->idEvent) ?></td>
                 <td><?= h($event->Title) ?></td>
                 <td><?= h($event->Description) ?></td>
-                <td><?= h($event->FuzzyDateBeginDay) ?></td>
-                <td><?= h($event->FuzzyDateBeginMonth) ?></td>
-                <td><?= h($event->FuzzyDateBeginYear) ?></td>
-                <td><?= h($event->FuzzyDateEndDay) ?></td>
-                <td><?= h($event->FuzzyDateEndMonth) ?></td>
-                <td><?= h($event->FuzzyDateEndYear) ?></td>
+                <td><?= h($event->FuzzyDateBegin) ?></td>
+                <td><?= h($event->FuzzyDateEnd) ?></td>
                 <td><?= h($event->ResonanceLevel) ?></td>
                 <td><?= h($event->Age) ?></td>
                 <td class="actions">

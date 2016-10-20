@@ -35,6 +35,26 @@ class Event extends Entity
     ];
 	
 	/**
+	 * Virtual Field: FuzzyDateBegin
+	 * 
+	 * @var string
+	 */
+	 protected function _getFuzzyDateBegin()
+	 {
+	 	return "" . $this->FuzzyDateBeginDay . '.' . $this->FuzzyDateBeginMonth . '.' . $this->FuzzyDateBeginYear;
+	 }
+	 
+	/**
+	 * Virtual Field: FuzzyDateBegin
+	 * 
+	 * @var string
+	 */
+	 protected function _getFuzzyDateEnd()
+	 {
+	 	return "" . $this->FuzzyDateEndDay . '.' . $this->FuzzyDateEndMonth . '.' . $this->FuzzyDateEndYear;
+	 }
+	 
+	/**
 	 * Virtual Field: Age
 	 * @todo
 	 * 

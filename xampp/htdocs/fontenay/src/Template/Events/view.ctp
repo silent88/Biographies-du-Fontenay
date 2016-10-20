@@ -50,5 +50,17 @@
             <th scope="row"><?= __('ResonanceLevel') ?></th>
             <td><?= h($event->ResonanceLevel) ?></td>
         </tr>
+         <tr>
+            <th scope="row"><?= __('DateBegin') ?></th>
+            <td><?= h($event->DateBegin) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('DateEnd') ?></th>
+            <td><?= h($event->DateEnd) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Years') ?></th>
+            <td><?= h($event->Years) ?></td>
+        </tr>
     </table>
 </div>
