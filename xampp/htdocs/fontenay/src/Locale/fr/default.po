@@ -17,44 +17,44 @@ msgstr ""
 #: Template/Events/view.ctp:14
 #: Template/Highlights/view.ctp:36
 msgid "FuzzyDateBeginDay"
-msgstr ""
+msgstr "Jour de début estimé"
 
 #: Template/Events/view.ctp:18
 #: Template/Highlights/view.ctp:37
 msgid "FuzzyDateBeginMonth"
-msgstr ""
+msgstr "Mois de début estimé"
 
 #: Template/Events/view.ctp:22
 #: Template/Highlights/view.ctp:38
 msgid "FuzzyDateBeginYear"
-msgstr ""
+msgstr "Année de début estimé"
 
 #: Template/Events/view.ctp:26
 #: Template/Highlights/view.ctp:39
 msgid "FuzzyDateEndDay"
-msgstr ""
+msgstr "Jour de fin estimé"
 
 #: Template/Events/view.ctp:30
 #: Template/Highlights/view.ctp:40
 msgid "FuzzyDateEndMonth"
-msgstr ""
+msgstr "Mois de fin estimé"
 
 #: Template/Events/view.ctp:34
 #: Template/Highlights/view.ctp:41
 msgid "FuzzyDateEndYear"
-msgstr ""
+msgstr "Année de fin estimé"
 
 #: Template/Events/view.ctp:38
 #: Template/Highlights/view.ctp:42
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: Template/Events/view.ctp:42
 #: Template/Highlights/view.ctp:44
 msgid "ResonanceLevel"
-msgstr ""
+msgstr "Niveau de Résonnance"
 
 #: Template/Events/view.ctp:46
 #: Template/Highlights/view.ctp:35
 msgid "IdEvent"
-msgstr ""
+msgstr "Id"
