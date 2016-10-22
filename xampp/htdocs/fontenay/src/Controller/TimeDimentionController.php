@@ -65,19 +65,42 @@ class TimeDimentionController extends AppController
 		));
 		$birthdays->select(['TimeDimention.id', 'TimeDimention.date']);
 		
+		//Add index to birthdays
+		$i = 0;
+		foreach($birthdays as $bday) {
+			$bday->age_ordinal = $i;
+			$i++;
+		}
+		
 		//debug($birthdays->toArray());
 		//debug($birthdays[0]);
 		
-		//Filter $birthdays
+		
+		return $birthdays;
+	 }
+
+	/**
+	 * Filter person birthdays
+	 * 
+	 * @param string|null $id of birthdate
+	 * @return array
+	 */
+	 public function filterPersonBirthdays($bDateId = null)
+	 {
+	 	$birthdays = $this->findPersonBirthdays($bDateId);
+		
+	 	//Filter $birthdays
 		$eventStart = new Date('2012-01-01');
 		$eventEnd = new Date('2014-01-01');
 		
 		//$r = new Collection(array('0'=>'0'));
 		$r = array();
+
 		foreach($birthdays as $bday) {
 			if (($bday->date >= $eventStart) and ($bday->date <= $eventEnd)) {
 				//$r->append($bday);
 				debug($bday->id);
+				debug($bday->age_ordinal);
 				$r[] = $bday;
 			}
 		}
