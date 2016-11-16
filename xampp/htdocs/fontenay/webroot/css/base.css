@@ -259,6 +259,12 @@ textarea {
     margin: 0; /* 3 */
 }
 
+div.fuzzydatebox {
+	width: 30%;	
+	display:inline-block;
+	box-sizing:unset;
+}
+
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
