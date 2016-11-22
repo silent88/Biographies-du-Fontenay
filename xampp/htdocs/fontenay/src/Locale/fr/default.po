@@ -58,3 +58,7 @@ msgstr "Niveau de Résonnance"
 #: Template/Highlights/view.ctp:35
 msgid "IdEvent"
 msgstr "Id"
+
+#EN
+msgid "Biographies disponibles: "
+msgstr "Available biographies: "

@@ -12,45 +12,56 @@
  * @since         0.10.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+use Cake\Cache\Cache;
+use Cake\Core\Configure;
+use Cake\Core\Plugin;
+use Cake\Datasource\ConnectionManager;
+use Cake\Error\Debugger;
+use Cake\Network\Exception\NotFoundException;
 
+$this -> layout = false;
 $cakeDescription = 'Biographies du Fontenay';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <?= $this->Html->charset() ?>
+    <?= $this -> Html -> charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        <?= $this -> fetch('title') ?>
     </title>
     <?= $this -> Html -> meta('icon'); ?>
     <?= $this -> Html -> meta('favicon-16x16.png', 'img/favicon-16x16.png', ['type' => 'icon', 'sizes' => '16x16']); ?>
     <?= $this -> Html -> meta('favicon-32x32.png', 'img/favicon-32x32.png', ['type' => 'icon', 'sizes' => '32x32']); ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <?= $this -> Html -> css('base.css') ?>
+    <?= $this -> Html -> css('cake.css') ?>
 
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+    <?= $this -> Html -> css('fontenay.css') ?>
+
+    <?= $this -> fetch('meta') ?>
+    <?= $this -> fetch('css') ?>
+    <?= $this -> fetch('script') ?>
 </head>
-<body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-            </ul>
-        </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
+<body class="home">
+    <header style="height: 15%">
+          <div class="banderole boxshadow">
+            <div id="corner_logo"><?= $this -> Html -> image('/img/fonteney_corner_landing.png') ?></div>
+   <div class="b_title">
+    <b id="b_title_text">Biographies du Fontenay</b>
+   </div>
+  </div>
+  
+    </header>
+    <div id="content">
+    	<?= $this->Form->create() ?>
+    	<legend><?= __('Biographies disponibles: ') ?></legend>
+    	<?= $this->Form->select('Name', ['Sven', 'Gaia'], ['multiple' => true]); ?>
+    	<?= $this->Form->button('Selectioner Biographie', ['type' => 'submit']) ?>
+    	
+    <?= $this->Form->end() ?>
+
     <footer>
     	<div class="centered">Copyright (c) Atelier du Fontenay, Licensed under the MIT License.</div>
     </footer>
