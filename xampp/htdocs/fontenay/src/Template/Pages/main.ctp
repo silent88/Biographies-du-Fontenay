@@ -46,11 +46,11 @@ $cakeDescription = 'Biographies du Fontenay';
 		<?= file_get_contents('/img/spiral_t12.svg', FILE_USE_INCLUDE_PATH); ?>
 	</div>
 	<div id='event-add'>		
-		<iframe sandbox="allow-scripts allow-forms allow-same-origin" src="/fontenay/events/add">
+		<iframe sandbox="allow-scripts allow-forms allow-same-origin" src="/fontenay/events/addSimple">
 		</iframe>
 	</div>
 	<div id='event-edit'>
-		<iframe sandbox="allow-scripts allow-forms allow-same-origin" src="/fontenay/events/edit/2">
+		<iframe sandbox="allow-scripts allow-forms allow-same-origin" src="/fontenay/events/editSimple/2">
 		</iframe>		
 	</div>
 	<div id='event-date-info'>
