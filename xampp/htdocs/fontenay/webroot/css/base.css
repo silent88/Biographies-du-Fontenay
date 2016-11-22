@@ -259,8 +259,9 @@ textarea {
     margin: 0; /* 3 */
 }
 
-div.fuzzydatebox {
+div.fuzzydatebox > div {
 	width: 30%;	
+	padding: 8px;
 	display:inline-block;
 	box-sizing:unset;
 }
