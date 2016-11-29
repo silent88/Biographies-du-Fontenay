@@ -30,6 +30,8 @@ $cakeDescription = 'Biographies du Fontenay';
 
     <?= $this -> Html -> css('base.css') ?>
     <?= $this -> Html -> css('cake.css') ?>
+    
+    <?= $this -> Html -> script('SpiralCanvas') ?>
 
     <?= $this -> fetch('meta') ?>
     <?= $this -> fetch('css') ?>
@@ -41,6 +43,7 @@ $cakeDescription = 'Biographies du Fontenay';
 		<?= $this->Form->select('Highlight', ['Highlight1', 'Highlight2']); ?>
 		<?= $this->Form->select('Layer', ['Layer1', 'Layer2']); ?>
 		<?= $this->Html->link(__('List Events'), ['controller' => 'Events', 'action' => 'index']); ?>
+		<?= $this->Form->button('TEST', ["onClick" => "javascript:colorYearElement('25', '#FF00FF');", 'type' => 'button']); ?>
 	</div>
 	<div id='main-canvas' style="width: 80%; display:inline-block; box-sizing:unset;">
 		<?= file_get_contents('/img/spiral_t12.svg', FILE_USE_INCLUDE_PATH); ?>
