@@ -55,22 +55,34 @@ class EventsTable extends Table
             ->allowEmpty('Description');
 
         $validator
-            ->allowEmpty('FuzzyDateBeginDay');
+            ->allowEmpty('FuzzyDateBeginDay')
+			->add('FuzzyDateBeginDay', ['multiple' => [ 'rule' => ['multiple', ['in' => array(
+																'*','1','2','3','4','5','6','7','8','9','10',
+																'11','12','13','14','15','16','17','18','19','20',
+																'21','22','23','24','25','26','27','28','29','30','31') ]]]]);
 
         $validator
-            ->allowEmpty('FuzzyDateBeginMonth');
+            ->allowEmpty('FuzzyDateBeginMonth')
+			->add('FuzzyDateBeginMonth', ['multiple' => [ 'rule' => ['multiple', ['in' => array('*','1','2','3','4','5','6','7','8','9','10','11','12') ]]]]);
 
         $validator
-            ->allowEmpty('FuzzyDateBeginYear');
+            ->allowEmpty('FuzzyDateBeginYear')
+			->integer('FuzzyDateBeginYear');
 
         $validator
-            ->allowEmpty('FuzzyDateEndDay');
+            ->allowEmpty('FuzzyDateEndDay')
+			->add('FuzzyDateEndDay', ['multiple' => [ 'rule' => ['multiple', ['in' => array(
+																'*','1','2','3','4','5','6','7','8','9','10',
+																'11','12','13','14','15','16','17','18','19','20',
+																'21','22','23','24','25','26','27','28','29','30','31') ]]]]);
 
         $validator
-            ->allowEmpty('FuzzyDateEndMonth');
+            ->allowEmpty('FuzzyDateEndMonth')
+			->add('FuzzyDateEndMonth', ['multiple' => [ 'rule' => ['multiple', ['in' => array('*','1','2','3','4','5','6','7','8','9','10','11','12') ]]]]);
 
         $validator
-            ->allowEmpty('FuzzyDateEndYear');
+            ->allowEmpty('FuzzyDateEndYear')
+			->integer('FuzzyDateEndYear');
 
         $validator
             ->allowEmpty('ResonanceLevel');

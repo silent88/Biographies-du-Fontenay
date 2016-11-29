@@ -49,16 +49,19 @@ class PersonsTable extends Table
 
         $validator
             ->allowEmpty('FirstName');
-
+			//->alphaNumeric('FirstName')
+			
         $validator
             ->allowEmpty('LastName');
+			//->alphaNumeric('LastName')
 
         $validator
             ->date('BirthDate')
             ->allowEmpty('BirthDate');
 
         $validator
-            ->allowEmpty('BirthHour');
+            ->allowEmpty('BirthHour')
+			->time('BirthHour');
 
         $validator
             ->allowEmpty('BirthPlace');
@@ -75,7 +78,8 @@ class PersonsTable extends Table
             ->allowEmpty('DeathDate');
 
         $validator
-            ->allowEmpty('DeathHour');
+            ->allowEmpty('DeathHour')
+			->time('DeathHour');
 
         $validator
             ->allowEmpty('DeathPlace');

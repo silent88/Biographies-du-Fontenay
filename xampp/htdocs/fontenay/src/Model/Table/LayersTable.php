@@ -56,7 +56,8 @@ class LayersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('Name');
+            ->allowEmpty('Name')
+			->alphaNumeric('Name');
 
         $validator
             ->integer('OrderNo')
