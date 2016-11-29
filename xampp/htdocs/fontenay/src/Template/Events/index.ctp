@@ -11,7 +11,6 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('idEvent') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Description') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('FuzzyDateBegin') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('FuzzyDateEnd') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('ResonanceLevel') ?></th>
@@ -24,7 +23,6 @@
             <tr>
                 <td><?= $this->Number->format($event->idEvent) ?></td>
                 <td><?= h($event->Title) ?></td>
-                <td><?= h($event->Description) ?></td>
                 <td><?= h($event->FuzzyDateBegin) ?></td>
                 <td><?= h($event->FuzzyDateEnd) ?></td>
                 <td><?= h($event->ResonanceLevel) ?></td>
