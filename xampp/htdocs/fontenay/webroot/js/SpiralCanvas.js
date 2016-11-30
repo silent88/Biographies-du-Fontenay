@@ -116,6 +116,48 @@ function parseSvgPath(svg_element) {
 }
 
 /*
+ * ObjDef QuadrantCoordinates
+ */
+function QuadrantCoordinates(v_center, v_quadrant1, v_quadrant2, v_quadrant3, v_quadrant4) {
+	this.center = v_center;
+	this.quadrant1 = v_quadrant1;
+	this.quadrant2 = v_quadrant2;
+	this.quadrant3 = v_quadrant3;
+	this.quadrant4 = v_quadrant4;
+}
+
+/*
+ * Get year center quadrant
+ * return QuadrantCoordinates
+ */
+
+function getYearCenter(yearNo) {
+	yearElement = getYearElement(yearNo);
+	
+	//From http://stackoverflow.com/questions/1691928/put-label-in-the-center-of-an-svg-path
+	var bbox = yearElement.getBBox();
+	
+	quad = new QuadrantCoordinates();
+	
+	quad.center = new VerticePointObj(	Math.floor(bbox.x + bbox.width/2.0), 
+										Math.floor(bbox.y + bbox.height/2.0));
+										
+	quad.quadrant1 = new VerticePointObj(	Math.floor(bbox.x + bbox.width*3/4.0), 
+											Math.floor(bbox.y + bbox.height*3/4.0));
+										
+	quad.quadrant2 = new VerticePointObj(	Math.floor(bbox.x + bbox.width/4.0), 
+											Math.floor(bbox.y + bbox.height*3/4.0));
+										
+	quad.quadrant3 = new VerticePointObj(	Math.floor(bbox.x + bbox.width/4.0), 
+											Math.floor(bbox.y + bbox.height/4.0));
+	
+	quad.quadrant4 = new VerticePointObj(	Math.floor(bbox.x + bbox.width*3/4.0), 
+											Math.floor(bbox.y + bbox.height/4.0));
+
+}
+
+
+/*
  * Color a specific yearElement
  * return null
  */
@@ -157,11 +199,13 @@ var EventObj = {
 	};
 
 function main() {
-	e = getYearElement("25");
-	parseSvgPath(e);
+	getYearCenter("25");
 }
 
 function test_run() {
 	e = new EventObj('2', 'Breakdown');
 	addEventMarker('72', e);
+	
+	e = getYearElement("25");
+	parseSvgPath(e);
 }

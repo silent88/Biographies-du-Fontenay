@@ -47,7 +47,7 @@ $cakeDescription = 'Biographies du Fontenay';
 		<?= $this->Form->button('TEST1', ["onClick" => "javascript:main();", 'type' => 'button']); ?>
 	</div>
 	<div id='main-canvas' style="width: 80%; display:inline-block; box-sizing:unset;">
-		<?= file_get_contents('/img/spiral_t12.svg', FILE_USE_INCLUDE_PATH); ?>
+		<?= file_get_contents('/img/spiral_t12-dot.svg', FILE_USE_INCLUDE_PATH); ?>
 	</div>
 	<div id='event-add'>		
 		<iframe sandbox="allow-scripts allow-forms allow-same-origin" src="/fontenay/events/addSimple">

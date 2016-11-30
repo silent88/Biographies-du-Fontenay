@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="t12.svg"
+   sodipodi:docname="t12-dot.svg"
    inkscape:export-filename="C:\tmp\t12_1.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -32,7 +32,7 @@
      inkscape:cx="649.72843"
      inkscape:cy="899.51563"
      inkscape:document-units="px"
-     inkscape:current-layer="g5725"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1600"
      inkscape:window-height="837"
@@ -861,6 +861,13 @@
        id="year_108"
        inkscape:connector-curvature="0"
        inkscape:label="#path4975" />
+    <circle
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.45475459;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle-template"
+       cx="300"
+       cy="20"
+       transform="scale(-1,-1)"
+       r="19.272625" />
   </g>
   <g
      inkscape:groupmode="layer"
