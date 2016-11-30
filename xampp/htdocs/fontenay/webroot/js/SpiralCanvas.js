@@ -23,6 +23,23 @@ function getYearElement(yearNo) {
 	return svg_element;
 }
 
+/*
+ * Returns the marker template from the canvas 
+ * return element|null
+ */
+function getMarkerTemplate() {
+
+	svg_element = document.getElementById("circle-template");
+	//Get element otherwise return error
+	
+	if (svg_element === null) {
+		alert('Error: SVG year element not found.');
+		exit;
+	}
+	
+	return svg_element;
+}
+
 function VerticesObj(v_minX, v_maxX, v_minY, v_maxY) {
 	this.minX = v_minX;
 	this.maxX = v_maxX;
@@ -154,6 +171,7 @@ function getYearCenter(yearNo) {
 	quad.quadrant4 = new VerticePointObj(	Math.floor(bbox.x + bbox.width*3/4.0), 
 											Math.floor(bbox.y + bbox.height/4.0));
 
+	return quad;
 }
 
 
@@ -169,9 +187,29 @@ function colorYearElement(yearNo, v_color) {
  * Add an event marker to the canvas
  */
 function addEventMarker(yearNo, eventObj) {
-	yearElement = getYearElement(yearNo);
-	yearElement.addMarker();
-	yearElement.marker.add(eventObj);
+	quad = getYearCenter(yearNo);
+	
+	new_marker = addSvgMarker(quad.center);
+	//new_marker.id = eventObj.id;
+	
+	//yearElement.marker.add(eventObj);
+}
+
+/*
+ * Add SVG marker at position by cloning template
+ * param VerticePointObj
+ * return svg_element
+ */
+function addSvgMarker(point) {
+	marker_template = getMarkerTemplate();
+	
+	marker = marker_template.parentNode.insertBefore(marker_template.cloneNode(true), marker_template);
+	
+	marker.id = "marker__";
+	marker.setAttribute("cx", point.x*-1);
+	marker.setAttribute("cy", point.y*-1);
+	
+	return marker;
 }
 
 /*
@@ -199,7 +237,7 @@ var EventObj = {
 	};
 
 function main() {
-	getYearCenter("25");
+	addEventMarker("25", null);
 }
 
 function test_run() {

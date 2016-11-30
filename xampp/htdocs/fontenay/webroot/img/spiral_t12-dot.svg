@@ -29,10 +29,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="649.72843"
+     inkscape:cx="162.58557"
      inkscape:cy="899.51563"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer3"
      showgrid="false"
      inkscape:window-width="1600"
      inkscape:window-height="837"
@@ -59,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
       </cc:Work>
@@ -861,11 +861,17 @@
        id="year_108"
        inkscape:connector-curvature="0"
        inkscape:label="#path4975" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Markers"
+     transform="translate(397.82101,142.43614)">
     <circle
-       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.45475459;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.45475459;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle-template"
-       cx="300"
-       cy="20"
+       cx="280"
+       cy="90"
        transform="scale(-1,-1)"
        r="19.272625" />
   </g>
