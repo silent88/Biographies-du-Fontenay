@@ -42,11 +42,11 @@ class FuzzyDateRange extends Entity
 		$r_b_month = '';
 		$r_b_year = $this->FuzzyDateBeginYear;
 		 
-		if ($this->FuzzyDateBeginDay=='?' and $this->FuzzyDateBeginMonth=='?') {
+		if ($this->FuzzyDateBeginDay=='*' and $this->FuzzyDateBeginMonth=='*') {
 			$r_b_day = '01';
 			$r_b_month = '01';
 		}		
-		else if ($this->FuzzyDateBeginDay=='?' and ($this->FuzzyDateBeginMonth <> '?')) {
+		else if ($this->FuzzyDateBeginDay=='*' and ($this->FuzzyDateBeginMonth <> '*')) {
 			$r_b_day = '01';
 			$r_b_month = $this->FuzzyDateBeginMonth;
 		}
@@ -72,12 +72,12 @@ class FuzzyDateRange extends Entity
 		$r_e_month = '';
 		$r_e_year = $this->FuzzyDateEndYear;
 		 
-		if ($this->FuzzyDateEndDay=='?' and $this->FuzzyDateEndMonth=='?') {
+		if ($this->FuzzyDateEndDay=='*' and $this->FuzzyDateEndMonth=='*') {
 			$r_e_day = '31';
 			$r_e_month = '12';
 			//echo "1st if " . $this->FuzzyDateEndDay . " " . $this->FuzzyDateEndMonth;
 		} 
-		else if ($this->FuzzyDateEndDay=='?' and ($this->FuzzyDateEndMonth <> '?')) {
+		else if ($this->FuzzyDateEndDay=='*' and ($this->FuzzyDateEndMonth <> '*')) {
 			
 			//echo "2nd if";
 			
