@@ -19,6 +19,7 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Network\Exception\NotFoundException;
 
+//$uses = array('Persons');
 $this -> layout = false;
 $cakeDescription = 'Biographies du Fontenay';
 ?>
@@ -58,7 +59,9 @@ $cakeDescription = 'Biographies du Fontenay';
     	<?= $this->Form->create() ?>
     	<legend><?= __('Biographies disponibles: ') ?></legend>
     	<?= $this->Form->select('Name', ['Sven', 'Gaia'], ['multiple' => true]); ?>
-    	<?= $this->Form->button('Selectioner Biographie', ['type' => 'submit']) ?>
+    	<?= $this->Form->button('Selectioner Biographie', ['type' => 'button']) ?>
+    	<?= $this->Form->button('Sauvegarder la Biographie', ['type' => 'button']) ?>
+    	<?= $this->Form->button('Sauvegarder toutes les Biographies', ['type' => 'button']) ?>
     	
     <?= $this->Form->end() ?>
 
