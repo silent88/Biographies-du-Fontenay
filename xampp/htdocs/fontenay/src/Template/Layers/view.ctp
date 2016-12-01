@@ -13,12 +13,12 @@
     <h3><?= h($layer->id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($layer->Name) ?></td>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= h($layer->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($layer->id) ?></td>
+            <th scope="row"><?= __('Name') ?></th>
+            <td><?= h($layer->Name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('OrderNo') ?></th>
@@ -32,6 +32,7 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
+                <th scope="col"><?= __('Color') ?></th>
                 <th scope="col"><?= __('OrderNo') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -39,6 +40,7 @@
             <tr>
                 <td><?= h($highlights->id) ?></td>
                 <td><?= h($highlights->Name) ?></td>
+                <td><?= h($highlights->Color) ?></td>
                 <td><?= h($highlights->OrderNo) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Highlights', 'action' => 'view', $highlights->id]) ?>

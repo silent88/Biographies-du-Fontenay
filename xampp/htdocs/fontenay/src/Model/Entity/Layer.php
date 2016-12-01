@@ -6,7 +6,7 @@ use Cake\ORM\Entity;
 /**
  * Layer Entity
  *
- * @property int $id
+ * @property string $id
  * @property string $Name
  * @property int $OrderNo
  *

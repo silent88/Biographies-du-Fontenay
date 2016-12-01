@@ -52,12 +52,11 @@ class LayersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
+            ->uuid('id')
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('Name')
-			->alphaNumeric('Name');
+            ->allowEmpty('Name');
 
         $validator
             ->integer('OrderNo')

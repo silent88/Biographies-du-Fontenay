@@ -20,7 +20,7 @@
         <tbody>
             <?php foreach ($layers as $layer): ?>
             <tr>
-                <td><?= $this->Number->format($layer->id) ?></td>
+                <td><?= h($layer->id) ?></td>
                 <td><?= h($layer->Name) ?></td>
                 <td><?= $this->Number->format($layer->OrderNo) ?></td>
                 <td class="actions">
