@@ -10,17 +10,13 @@
 <div class="events view large-9 medium-8 columns content">
     <h3><?= h($event->idEvent) ?></h3>
     <table class="vertical-table">
-    	<tr>
+        <tr>
             <th scope="row"><?= __('IdEvent') ?></th>
-            <td><?= $this->Number->format($event->idEvent) ?></td>
+            <td><?= h($event->idEvent) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Title') ?></th>
             <td><?= h($event->Title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Description') ?></th>
-            <td><?= h($event->Description) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('FuzzyDateBeginDay') ?></th>
@@ -62,5 +58,13 @@
             <th scope="row"><?= __('Years') ?></th>
             <td><?= h($event->Years) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Person Id') ?></th>
+            <td><?= h($event->person_id) ?></td>
+        </tr>
     </table>
+    <div class="row">
+        <h4><?= __('Description') ?></h4>
+        <?= $this->Text->autoParagraph(h($event->Description)); ?>
+    </div>
 </div>

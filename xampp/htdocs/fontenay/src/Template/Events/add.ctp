@@ -25,10 +25,11 @@
             echo "</div>";
 			
             echo $this->Form->input('ResonanceLevel', array(
-				'options' => array('VolontÃ©' => 'VolontÃ©', 'Consience' => 'Consience', 'Sentiment' => 'Sentiment'),
+				'options' => array('Volonté' => 'Volonté', 'Consience' => 'Consience', 'Sentiment' => 'Sentiment'),
 				'empty' => ' ',
 				'default' => 'empty'
 			));
+            echo $this->Form->input('person_id');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

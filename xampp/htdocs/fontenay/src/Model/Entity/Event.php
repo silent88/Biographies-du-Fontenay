@@ -6,7 +6,7 @@ use Cake\ORM\Entity;
 /**
  * Event Entity
  *
- * @property int $idEvent
+ * @property string $idEvent
  * @property string $FuzzyDateBeginDay
  * @property string $FuzzyDateBeginMonth
  * @property string $FuzzyDateBeginYear
@@ -14,8 +14,9 @@ use Cake\ORM\Entity;
  * @property string $FuzzyDateEndMonth
  * @property string $FuzzyDateEndYear
  * @property string $Title
- * @property string|resource $Description
+ * @property string $Description
  * @property string $ResonanceLevel
+ * @property string $person_id
  */
 class Event extends Entity
 {

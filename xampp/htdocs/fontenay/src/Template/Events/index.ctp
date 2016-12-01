@@ -15,18 +15,20 @@
                 <th scope="col"><?= $this->Paginator->sort('FuzzyDateEnd') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('ResonanceLevel') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Age') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('person_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($events as $event): ?>
             <tr>
-                <td><?= $this->Number->format($event->idEvent) ?></td>
+                <td><?= h($event->idEvent) ?></td>
                 <td><?= h($event->Title) ?></td>
                 <td><?= h($event->FuzzyDateBegin) ?></td>
                 <td><?= h($event->FuzzyDateEnd) ?></td>
                 <td><?= h($event->ResonanceLevel) ?></td>
                 <td><?= h($event->Age) ?></td>
+                <td><?= h($event->person_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $event->idEvent]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $event->idEvent]) ?>

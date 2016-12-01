@@ -9,6 +9,9 @@ use Cake\Validation\Validator;
 /**
  * Events Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $People
+ * @property \Cake\ORM\Association\BelongsToMany $Highlights
+ *
  * @method \App\Model\Entity\Event get($primaryKey, $options = [])
  * @method \App\Model\Entity\Event newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Event[] newEntities(array $data, array $options = [])
@@ -33,6 +36,15 @@ class EventsTable extends Table
         $this->table('events');
         $this->displayField('idEvent');
         $this->primaryKey('idEvent');
+
+        $this->belongsTo('People', [
+            'foreignKey' => 'person_id'
+        ]);
+        $this->belongsToMany('Highlights', [
+            'foreignKey' => 'event_id',
+            'targetForeignKey' => 'highlight_id',
+            'joinTable' => 'events_highlights'
+        ]);
     }
 
     /**
@@ -44,7 +56,7 @@ class EventsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('idEvent')
+            ->uuid('idEvent')
             ->allowEmpty('idEvent', 'create');
 
 		$validator
@@ -88,5 +100,19 @@ class EventsTable extends Table
             ->allowEmpty('ResonanceLevel');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['person_id'], 'People'));
+
+        return $rules;
     }
 }
