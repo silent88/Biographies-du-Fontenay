@@ -31,7 +31,10 @@
             echo "</div>";
 			
             echo $this->Form->input('ResonanceLevel', array(
-				'options' => array('Volonté' => 'Volonté', 'Consience' => 'Consience', 'Sentiment' => 'Sentiment'),
+				'options' => array('Volonté' => 'Volonté', 'Consience' => 'Consience', 'Sentiment' => 'Sentiment',
+									 'Corps Physique' => 'Corps Physique', 'Corps Eterique' => 'Corps Eterique', 'Corps Astrale' => 'Corps Astrale', 'Corps de Vie' => 'Corps de Vie',
+									 'Psychisme' => 'Psychisme', 'Soi-Esprit' => 'Soi-Esprit', 'Je' => 'Je', 'Atma' => 'Atma', 'Buddhi' => 'Buddhi'
+									),
 				'empty' => ' ',
 				'default' => 'empty'
 			));
