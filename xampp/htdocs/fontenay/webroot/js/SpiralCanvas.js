@@ -40,6 +40,9 @@ function getMarkerTemplate() {
 	return svg_element;
 }
 
+/*
+ * ObjDef VerticesObj 
+ */
 function VerticesObj(v_minX, v_maxX, v_minY, v_maxY) {
 	this.minX = v_minX;
 	this.maxX = v_maxX;
@@ -47,6 +50,9 @@ function VerticesObj(v_minX, v_maxX, v_minY, v_maxY) {
 	this.minY = v_minY;
 };
 
+/*
+ * ObjDef VerticePointObj
+ */
 function VerticePointObj(v_x, v_y) {
 	this.x = v_x;
 	this.y = v_y;
@@ -190,9 +196,14 @@ function addEventMarker(yearNo, eventObj) {
 	quad = getYearCenter(yearNo);
 	
 	new_marker = addSvgMarker(quad.center);
-	//new_marker.id = eventObj.id;
 	
-	//yearElement.marker.add(eventObj);
+	//Add event data
+	new_marker.id = "marker_" + eventObj.id;
+	new_marker.attributes['data-event-id'].value = eventObj.id;
+	new_marker.attributes['data-event-title'].value = eventObj.title;
+	//@TODO 
+	//Should be new_marker.dataset.eventID 
+	
 }
 
 /*
@@ -229,20 +240,37 @@ function parsePersonEventTree(tree) {
 }
 
 /*
+ * Called when an event marker is clicked
+ * return null
+ */
+function eventMarkerClick(marker) {
+	s = "EventID: " + marker.attributes['data-event-id'].value + ", \nEventTitle: " + marker.attributes['data-event-title'].value;
+	alert(s);
+}
+
+/*
+ * ObjDef EventObj
  * Basic event definition
  */
-var EventObj = {
-		id: '',
-		title: ''
-	};
+function EventObj(v_id, v_title) {
+	this.id = v_id;
+	this.title = v_title;
+}
 
 function main() {
-	addEventMarker("25", null);
+	e = new EventObj('2', 'Breakdown');
+	addEventMarker('72', e);
 }
 
 function test_run() {
-	e = new EventObj('2', 'Breakdown');
-	addEventMarker('72', e);
+	
+	addEventMarker("25", null);
+	addEventMarker("30", null);
+	addEventMarker("50", null);
+	addEventMarker("70", null);
+	addEventMarker("90", null);
+	addEventMarker("108", null);
+	addEventMarker("8", null);
 	
 	e = getYearElement("25");
 	parseSvgPath(e);

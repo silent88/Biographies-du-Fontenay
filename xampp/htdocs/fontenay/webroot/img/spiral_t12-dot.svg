@@ -873,7 +873,10 @@
        cx="280"
        cy="90"
        transform="scale(-1,-1)"
-       r="19.272625" />
+       r="19.272625" 
+	   onclick="eventMarkerClick(this);"
+	   data-event-id="" 
+	   data-event-title=""/>
   </g>
   <g
      inkscape:groupmode="layer"
