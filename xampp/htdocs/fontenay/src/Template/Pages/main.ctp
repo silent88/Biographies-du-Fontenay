@@ -44,7 +44,7 @@ $cakeDescription = 'Biographies du Fontenay';
 		<?= $this->Form->select('Layer', ['Layer1', 'Layer2']); ?>
 		<?= $this->Html->link(__('List Events'), ['controller' => 'Events', 'action' => 'index']); ?>
 		<?= $this->Html->link(__('List Highlights'), ['controller' => 'Highlights', 'action' => 'index']); ?>
-		<?= $this->Form->button('TEST1', ["onClick" => "javascript:colorYearElement('25', '#FF00FF');", 'type' => 'button']); ?>
+		<?= $this->Form->button('TEST1', ["onClick" => "javascript:couleurNeudLunaires('#E1E1E1');", 'type' => 'button']); ?>
 		<?= $this->Form->button('TEST1', ["onClick" => "javascript:main();", 'type' => 'button']); ?>
 	</div>
 	<div id='main-canvas' style="width: 80%; display:inline-block; box-sizing:unset;">

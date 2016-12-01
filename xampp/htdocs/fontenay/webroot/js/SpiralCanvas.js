@@ -190,6 +190,19 @@ function colorYearElement(yearNo, v_color) {
 }
 
 /*
+ * Color the 'Neud Lunaires'
+ * return null
+ */
+function couleurNeudLunaires(v_color) {
+	// (18 + 7/12) * N 
+	neuds = [18.58, 37.16, 55.75, 74.33, 92.91];
+	
+	for(i=0; i < neuds.length; i++) {
+		colorYearElement(Math.floor(neuds[i]), v_color);
+	}
+}
+
+/*
  * Add an event marker to the canvas
  */
 function addEventMarker(yearNo, eventObj) {
