@@ -62,8 +62,7 @@ class HighlightsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('Name')
-			->alphaNumeric('Name');
+            ->allowEmpty('Name');
 
         $validator
             ->allowEmpty('Color');

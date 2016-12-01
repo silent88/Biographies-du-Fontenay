@@ -20,7 +20,23 @@
         <legend><?= __('Edit Highlight') ?></legend>
         <?php
             echo $this->Form->input('Name');
-            echo $this->Form->input('Color');
+            echo $this->Form->label('Color');
+            echo $this->Form->radio('Color',
+											[
+										        ['value' => '5484ed', 'text' => 'Bold Blue', 'style' => 'color:#5484ed;'],
+										        ['value' => 'a4bdfc', 'text' => 'Blue', 'style' => 'color:#a4bdfc;'],
+										        ['value' => '46d6db', 'text' => 'Turquoise', 'style' => 'color:#46d6db;'],
+										        ['value' => '7ae7bf', 'text' => 'Green', 'style' => 'color:#7ae7bf;'],
+										        ['value' => '51b749', 'text' => 'Bold Green', 'style' => 'color:#51b749;'],
+										        ['value' => 'fbd75b', 'text' => 'Yellow', 'style' => 'color:#fbd75b;'],
+										        ['value' => 'ffb878', 'text' => 'Orange', 'style' => 'color:#ffb878;'],
+										        ['value' => 'ff887c', 'text' => 'Red', 'style' => 'color:#ff887c;'],
+										        ['value' => 'dc2127', 'text' => 'Bold Red', 'style' => 'color:#dc2127;'],
+										        ['value' => 'dbadff', 'text' => 'Purple', 'style' => 'color:#dbadff;'],
+										        ['value' => 'cca6ac', 'text' => 'Pink', 'style' => 'color:#cca6ac;'],
+										        ['value' => 'e1e1e1', 'text' => 'Gray', 'style' => 'color:#e1e1e1;']
+											]
+									);
             echo $this->Form->input('OrderNo');
             echo $this->Form->input('events._ids', ['options' => $events]);
             echo $this->Form->input('layers._ids', ['options' => $layers]);
