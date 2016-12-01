@@ -66,6 +66,9 @@ class HighlightsTable extends Table
 			->alphaNumeric('Name');
 
         $validator
+            ->allowEmpty('Color');
+
+        $validator
             ->integer('OrderNo')
             ->allowEmpty('OrderNo');
 

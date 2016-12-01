@@ -19,6 +19,10 @@
             <td><?= h($highlight->Name) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Color') ?></th>
+            <td><?= h($highlight->Color) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($highlight->id) ?></td>
         </tr>

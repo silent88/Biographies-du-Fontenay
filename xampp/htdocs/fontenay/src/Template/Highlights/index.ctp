@@ -15,6 +15,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Color') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('OrderNo') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -24,6 +25,7 @@
             <tr>
                 <td><?= $this->Number->format($highlight->id) ?></td>
                 <td><?= h($highlight->Name) ?></td>
+                <td><?= h($highlight->Color) ?></td>
                 <td><?= $this->Number->format($highlight->OrderNo) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $highlight->id]) ?>

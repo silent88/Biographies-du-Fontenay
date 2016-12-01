@@ -8,6 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $Name
+ * @property string $Color
  * @property int $OrderNo
  *
  * @property \App\Model\Entity\Event[] $events

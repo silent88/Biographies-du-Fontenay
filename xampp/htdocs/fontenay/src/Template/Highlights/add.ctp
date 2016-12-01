@@ -14,6 +14,7 @@
         <legend><?= __('Add Highlight') ?></legend>
         <?php
             echo $this->Form->input('Name');
+            echo $this->Form->input('Color');
             echo $this->Form->input('OrderNo');
             echo $this->Form->input('events._ids', ['options' => $events]);
             echo $this->Form->input('layers._ids', ['options' => $layers]);
