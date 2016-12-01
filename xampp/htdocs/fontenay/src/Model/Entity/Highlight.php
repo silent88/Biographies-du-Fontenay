@@ -6,7 +6,7 @@ use Cake\ORM\Entity;
 /**
  * Highlight Entity
  *
- * @property int $id
+ * @property string $id
  * @property string $Name
  * @property string $Color
  * @property int $OrderNo

@@ -23,7 +23,7 @@
         <tbody>
             <?php foreach ($highlights as $highlight): ?>
             <tr>
-                <td><?= $this->Number->format($highlight->id) ?></td>
+                <td><?= h($highlight->id) ?></td>
                 <td><?= h($highlight->Name) ?></td>
                 <td><?= h($highlight->Color) ?></td>
                 <td><?= $this->Number->format($highlight->OrderNo) ?></td>

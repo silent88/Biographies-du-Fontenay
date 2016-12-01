@@ -15,16 +15,16 @@
     <h3><?= h($highlight->id) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= h($highlight->id) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($highlight->Name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Color') ?></th>
             <td><?= h($highlight->Color) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($highlight->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('OrderNo') ?></th>
