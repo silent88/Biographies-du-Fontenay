@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Persons Model
  *
+ * @property \Cake\ORM\Association\HasMany $Events
+ *
  * @method \App\Model\Entity\Person get($primaryKey, $options = [])
  * @method \App\Model\Entity\Person newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Person[] newEntities(array $data, array $options = [])
@@ -33,6 +35,10 @@ class PersonsTable extends Table
         $this->table('persons');
         $this->displayField('id');
         $this->primaryKey('id');
+
+        $this->hasMany('Events', [
+            'foreignKey' => 'person_id'
+        ]);
     }
 
     /**
@@ -44,7 +50,7 @@ class PersonsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
+            ->uuid('id')
             ->allowEmpty('id', 'create');
 
         $validator

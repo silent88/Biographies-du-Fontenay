@@ -11,6 +11,10 @@
     <h3><?= h($person->id) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= h($person->id) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('FirstName') ?></th>
             <td><?= h($person->FirstName) ?></td>
         </tr>
@@ -41,10 +45,6 @@
         <tr>
             <th scope="row"><?= __('DeathCountry') ?></th>
             <td><?= h($person->DeathCountry) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($person->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('BirthTimeZone') ?></th>

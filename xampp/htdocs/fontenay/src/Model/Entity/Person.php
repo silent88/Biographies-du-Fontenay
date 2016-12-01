@@ -6,7 +6,7 @@ use Cake\ORM\Entity;
 /**
  * Person Entity
  *
- * @property int $id
+ * @property string $id
  * @property string $FirstName
  * @property string $LastName
  * @property \Cake\I18n\Time $BirthDate

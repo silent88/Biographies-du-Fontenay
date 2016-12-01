@@ -27,7 +27,7 @@
         <tbody>
             <?php foreach ($persons as $person): ?>
             <tr>
-                <td><?= $this->Number->format($person->id) ?></td>
+                <td><?= h($person->id) ?></td>
                 <td><?= h($person->FirstName) ?></td>
                 <td><?= h($person->LastName) ?></td>
                 <td><?= h($person->BirthDate) ?></td>

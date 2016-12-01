@@ -17,7 +17,7 @@ class PersonsFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'id' => ['type' => 'uuid', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'FirstName' => ['type' => 'string', 'length' => 64, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'LastName' => ['type' => 'string', 'length' => 64, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'BirthDate' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
@@ -46,15 +46,15 @@ class PersonsFixture extends TestFixture
      */
     public $records = [
         [
-            'id' => 1,
+            'id' => '31c21a37-c8ed-45c8-8a6c-080a6fe79791',
             'FirstName' => 'Lorem ipsum dolor sit amet',
             'LastName' => 'Lorem ipsum dolor sit amet',
-            'BirthDate' => '2016-10-07',
+            'BirthDate' => '2016-12-01',
             'BirthHour' => 'Lor',
             'BirthPlace' => 'Lorem ipsum dolor sit amet',
             'BirthCountry' => 'Lorem ipsum dolor sit amet',
             'BirthTimeZone' => 1,
-            'DeathDate' => '2016-10-07',
+            'DeathDate' => '2016-12-01',
             'DeathHour' => 'Lor',
             'DeathPlace' => 'Lorem ipsum dolor sit amet',
             'DeathCountry' => 'Lorem ipsum dolor sit amet'
