@@ -1,0 +1,6 @@
+/xampp/tmp/*
+/xampp/apache/logs/*
+/xampp/php/logs/*
+/xampp/xampp-control.log
+/.settings/*
+/.project
