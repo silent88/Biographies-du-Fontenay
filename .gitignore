@@ -1,6 +1,9 @@
 /xampp/tmp/*
 /xampp/apache/logs/*
 /xampp/php/logs/*
+/xampp/apache/logs/httpd.pid
+/xampp/mysql/data/mysql.pid
+/xampp/mysql/data/mysql_error.log
 /xampp/xampp-control.log
 /.settings/*
 /.project
