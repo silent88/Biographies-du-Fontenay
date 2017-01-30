@@ -58,7 +58,7 @@ $cakeDescription = 'Biographies du Fontenay';
     <div id="content">
     	<?= $this->Form->create() ?>
     	<legend><?= __('Biographies disponibles: ') ?></legend>
-    	<?= $this->Form->select('Name', ['Sven', 'Gaia'], ['multiple' => true]); ?>
+    	<?= $this->Form->select('Name', ['Steve', 'Gaia'], ['multiple' => true]); ?>
     	<?= $this->Form->button('Selectioner Biographie', ['type' => 'button']) ?>
     	<?= $this->Form->button('Sauvegarder la Biographie', ['type' => 'button']) ?>
     	<?= $this->Form->button('Sauvegarder toutes les Biographies', ['type' => 'button']) ?>

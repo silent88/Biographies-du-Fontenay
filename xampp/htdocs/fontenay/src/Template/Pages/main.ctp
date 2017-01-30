@@ -38,7 +38,7 @@ $cakeDescription = 'Biographies du Fontenay';
     <?= $this -> fetch('script') ?>
 </head>
 <body>
-	<div id='name-header'><p>Sven, Godo</p></div>
+	<div id='name-header'><p>Person.LastName, Person.FirstName</p></div>
 	<div id='tool-bar'>
 		<?= $this->Form->select('Highlight', ['Highlight1', 'Highlight2']); ?>
 		<?= $this->Form->select('Layer', ['Layer1', 'Layer2']); ?>
